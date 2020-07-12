@@ -1,0 +1,108 @@
+@import '~bootstrap/scss/bootstrap'
+@import url('https://fonts.googleapis.com/css?family=PT+Serif')
+
+body
+    font-family: 'PT Serif', serif
+    section
+        padding: 20px 0 20px 0
+        
+        &#about
+            background: #242528
+            padding: 40px 0 40px 0
+            P
+                color: #ffffff
+            .description
+                margin-top: 20px
+            .avatar-box
+                padding-top: 100%
+                width: 100%
+                position: relative
+                overflow: hidden 
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    position: absolute
+                    top: 0
+                    left: 0
+                    transition: all .4s
+
+        &#my-works
+            background-color: #f8f8f8
+            h2
+                color: #565656
+                font-size: 38px
+            
+    .container
+        .box
+            cursor: pointer
+
+            .text
+                position: absolute
+                z-index: 10
+                opacity: 0
+                transition: all .4s
+                color: #ffffff
+                
+                h3
+                    text-align: center
+                p
+                    text-align: center
+                hr
+                    width: 50px
+                    border-top: 2px solid #fff
+                    border-radius: 5px
+                    margin: 15px auto 15px auto
+            .picture֊container
+                padding-top: 100%
+                width: 100%
+                position: relative
+                margin-top: 30px
+                overflow: hidden 
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    position: absolute
+                    top: 0
+                    left: 0
+                    transition: all .4s
+                .filter
+                    transition: all .4s
+
+            &:hover
+                .text
+                    opacity: 1
+                .filter
+                    background-color: #A01E0E
+                    opacity: .9
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                img
+                    transform: scale(1.5)
+
+    .modal-container 
+        display: grid
+        height: 100%
+        background: rgba(0, 0, 0, 0.9)
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 0
+        transition: opacity .4s
+        opacity: 0
+
+    .modal-image 
+        max-width: 100%
+        max-height: 100vh
+        margin: auto
+
+    .show
+        z-index: 1000
+        opacity: 1
+
+    .hiding
+        z-index: 1000
